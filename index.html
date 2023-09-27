@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagina</title>
+    <script src="password.js"></script>
+    <script src="calculator.js"></script>
+    <script src="OddorEven.js"></script>
+    <script src="string.js"></script>
+</head>
+<body>
+    <body>
+        <div class="calculator">
+                <input type="text" id="display" readonly>
+                <div class="result-message">
+                <p id="result-message"></p>
+            <div class="buttons">
+                <div class="button-row">
+                    <button class="number" onclick="handleInput('7')">7</button>
+                    <button class="number" onclick="handleInput('8')">8</button>
+                    <button class="number" onclick="handleInput('9')">9</button>
+                    <button class="operator" onclick="handleInput('+')">+</button>
+                </div>
+                <div class="button-row">
+                    <button class="number" onclick="handleInput('4')">4</button>
+                    <button class="number" onclick="handleInput('5')">5</button>
+                    <button class="number" onclick="handleInput('6')">6</button>
+                    <button class="operator" onclick="handleInput('-')">-</button>
+                </div>
+                <div class="button-row">
+                    <button class="number" onclick="handleInput('1')">1</button>
+                    <button class="number" onclick="handleInput('2')">2</button>
+                    <button class="number" onclick="handleInput('3')">3</button>
+                    <button class="operator" onclick="handleInput('*')">*</button>
+                </div>
+                <div class="button-row">
+                    <button class="number" onclick="handleInput('0')">0</button>
+                    <button class="operator" onclick="handleInput('/')">/</button>
+                    <button class="equals" onclick="handleInput('=')">=</button>
+                    <button class="clear" onclick="handleInput('C')">C</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="password-generator">
+            <h1>PASSWORD</h1>
+            <div class="options">
+                <label for="length" class="custom-label">length:</label>
+                <input type="number" id="length" min="6" max="18" value="12">
+            </div>
+            <br>
+                <label for="uppercase" class="custom-label">Uppercase</label>
+                <input type="checkbox" id="uppercase" checked>
+            <br>
+                <label for="lowercase" class="custom-label">Lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
+            <br>
+                <label for="Number" class="custom-label">Number</label>
+                <input type="checkbox" id="numbers" checked>
+            <br>
+                <label for="symbols" class="custom-label">Symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            <br>
+                <button id="generate">Password</button>
+            <br>
+                <div class="result">
+                    <input type="text" id="password" readonly>
+                </div>
+        </div>
+
+
+        <div class="container">
+            <div class="flex">
+                <div class="line">
+                    <h1>Odd or Even</h1>
+                    <input type="text" id="numeroInput"><br>
+                    <button id="button" onclick="checkEvenOrOdd()">Click</button><br>
+                    <input type="text" id="result" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flex">
+                <div class="home">
+                    <h1>STRING</h1>
+                    <input type="text" id="input"><br>
+                    <button id="button" onclick="reverseString()">Click</button><br>
+                    <input type="text" id="string" disabled>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
